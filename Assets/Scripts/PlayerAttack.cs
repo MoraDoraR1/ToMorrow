@@ -25,6 +25,14 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 현재 공격 대상을 갱신한다. (몬스터 재스폰 시 스포너가 호출)
+    /// </summary>
+    public void SetTarget(RectTransform target)
+    {
+        enemyTarget = target;
+    }
+
     void ThrowProjectile()
     {
         if (projectilePrefab == null || firePoint == null || canvasTransform == null)

@@ -13,7 +13,7 @@ public class Projectile : MonoBehaviour
     public float hitRadius = 30f;
 
     [Header("자동 파괴까지의 시간 (타겟을 못 맞췄을 경우)")]
-    public float lifeTime = 3f;
+    public float lifeTime = 3.5f;
 
     private Vector2 direction;
     private RectTransform rectTransform;
@@ -45,17 +45,23 @@ public class Projectile : MonoBehaviour
     {
         if (hasHit) return;
 
+        // 타겟(몬스터)이 파괴되면 투사체도 즉시 정리한다.
+        // 이렇게 안 하면 타겟을 잃은 투사체가 명중 판정 없이 화면을 가로질러
+        // lifeTime 동안 남아, 마치 잔상처럼 보인다.
+        if (targetRect == null)
+        {
+            DestroySelf();
+            return;
+        }
+
         // RectTransform 이동은 anchoredPosition 기준
         rectTransform.anchoredPosition += direction * speed * Time.deltaTime;
 
-        if (targetRect != null)
+        // Physics2D 콜라이더 대신 월드 좌표 기준 거리로 명중 판정
+        float distance = Vector2.Distance(rectTransform.position, targetRect.position);
+        if (distance <= hitRadius)
         {
-            // Physics2D 콜라이더 대신 월드 좌표 기준 거리로 명중 판정
-            float distance = Vector2.Distance(rectTransform.position, targetRect.position);
-            if (distance <= hitRadius)
-            {
-                HandleHit();
-            }
+            HandleHit();
         }
     }
 
@@ -72,6 +78,13 @@ public class Projectile : MonoBehaviour
             }
         }
 
+        DestroySelf();
+    }
+
+    void DestroySelf()
+    {
+        // UI(Canvas) 잔상(ghost mesh) 방지: 비활성화 후 파괴
+        gameObject.SetActive(false);
         Destroy(gameObject);
     }
 }
