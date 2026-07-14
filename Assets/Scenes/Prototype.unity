@@ -3410,6 +3410,8 @@ GameObject:
   - component: {fileID: 1696875480}
   - component: {fileID: 1696875482}
   - component: {fileID: 1696875481}
+  - component: {fileID: 1696875483}
+  - component: {fileID: 1696875484}
   m_Layer: 5
   m_Name: Moon
   m_TagString: Untagged
@@ -3474,6 +3476,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696875479}
   m_CullTransparentMesh: 1
+--- !u!114 &1696875483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696875479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced743106e6f3cc45928353bdfeb0acb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FullMoonAttack
+  playerAttack: {fileID: 548968127}
+  damage: 5
+  interval: 1
+--- !u!114 &1696875484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696875479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2cc2a0b7ac27384e9e816df40a82fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoonPulse
+  minScale: 0.9
+  maxScale: 1.1
+  period: 1.5
 --- !u!1 &1809306679
 GameObject:
   m_ObjectHideFlags: 0
@@ -3835,11 +3867,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3179610512387801904, guid: 9385ab2302b9eb548a45b6b3cf142dda, type: 3}
       propertyPath: speed
-      value: 300
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 3179610512387801904, guid: 9385ab2302b9eb548a45b6b3cf142dda, type: 3}
       propertyPath: damage
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7223924352544556792, guid: 9385ab2302b9eb548a45b6b3cf142dda, type: 3}
       propertyPath: m_Name

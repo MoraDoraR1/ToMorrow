@@ -25,6 +25,9 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    /// <summary>현재 공격 대상 (보름달 자동공격 등에서 참조).</summary>
+    public RectTransform CurrentTarget => enemyTarget;
+
     /// <summary>
     /// 현재 공격 대상을 갱신한다. (몬스터 재스폰 시 스포너가 호출)
     /// </summary>

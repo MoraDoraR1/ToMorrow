@@ -86,9 +86,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf681c28d3769554fb17d8a7a14d13d5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  speed: 300
-  damage: 10
+  speed: 800
+  damage: 20
   hitRadius: 30
   lifeTime: 3.5
