@@ -108,7 +108,17 @@ public class BossManager : MonoBehaviour
         if (bossRect != null && spawnPoint != null) bossRect.position = spawnPoint.position;
 
         currentBoss = bossObj.GetComponent<EnemyHealth>();
-        if (currentBoss != null) currentBoss.OnDeath += HandleBossDefeated;
+        if (currentBoss != null)
+        {
+            // 현재 스테이지의 보스 이미지/스탯 적용
+            StageInfo info = StageManager.Instance != null ? StageManager.Instance.CurrentStageInfo : null;
+            if (info != null && info.boss != null)
+            {
+                currentBoss.Initialize(info.boss.hp, info.boss.coinReward, info.boss.sprite);
+            }
+
+            currentBoss.OnDeath += HandleBossDefeated;
+        }
 
         // 공격 타겟을 보스로
         if (playerAttack != null && bossRect != null) playerAttack.SetTarget(bossRect);

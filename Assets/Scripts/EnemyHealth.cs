@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class EnemyHealth : MonoBehaviour
 
     [Header("스테이지 처치 수(0/50)에 포함 (보스는 false)")]
     public bool countsTowardStage = true;
+
+    [Header("몸체 이미지 (비우면 루트의 Image 자동 사용)")]
+    public Image bodyImage;
 
     // 스포너가 구독하여 사망 시 다음 몬스터를 스폰한다
     public event Action<EnemyHealth> OnDeath;
@@ -24,6 +28,19 @@ public class EnemyHealth : MonoBehaviour
     void Awake()
     {
         MaxHp = hp;
+        if (bodyImage == null) bodyImage = GetComponent<Image>();
+    }
+
+    /// <summary>
+    /// 스폰 시 스테이지 데이터에 맞춰 체력/보상/이미지를 설정한다.
+    /// (Awake 이후, HP바 Start 이전에 스포너가 호출)
+    /// </summary>
+    public void Initialize(int newHp, int newCoinReward, Sprite sprite)
+    {
+        hp = newHp;
+        MaxHp = newHp;
+        coinReward = newCoinReward;
+        if (sprite != null && bodyImage != null) bodyImage.sprite = sprite;
     }
 
     public void TakeDamage(int damage)

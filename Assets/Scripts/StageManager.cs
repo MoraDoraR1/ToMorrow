@@ -13,8 +13,8 @@ public class StageManager : MonoBehaviour
     [Header("현재 스테이지 (STAGE.00 ~ STAGE.12)")]
     [SerializeField] private int currentStage = 0;
 
-    [Header("스테이지 이름 (인덱스 = 스테이지 번호, 0번=STAGE.00)")]
-    [SerializeField] private string[] stageNames;
+    [Header("스테이지별 테마 데이터 (인덱스 = 스테이지 번호, 0번=STAGE.00)")]
+    [SerializeField] private StageInfo[] stages;
 
     [Header("보스 도전까지 필요한 일반 몬스터 처치 수")]
     [SerializeField] private int killsRequired = 50;
@@ -26,14 +26,25 @@ public class StageManager : MonoBehaviour
     public int KillsRequired => killsRequired;
     public int KillCount => killCount;
     public string CurrentStageName => GetStageName(currentStage);
+    public StageInfo CurrentStageInfo => GetStageInfo(currentStage);
 
-    /// <summary>스테이지 번호에 해당하는 이름을 돌려준다. 지정 안 됐으면 "STAGE.00" 형식 기본값.</summary>
+    /// <summary>스테이지 번호에 해당하는 테마 데이터를 돌려준다. 범위를 벗어나면 null.</summary>
+    public StageInfo GetStageInfo(int stage)
+    {
+        if (stages != null && stage >= 0 && stage < stages.Length)
+        {
+            return stages[stage];
+        }
+        return null;
+    }
+
+    /// <summary>스테이지 이름을 돌려준다. 지정 안 됐으면 "STAGE.00" 형식 기본값.</summary>
     public string GetStageName(int stage)
     {
-        if (stageNames != null && stage >= 0 && stage < stageNames.Length
-            && !string.IsNullOrEmpty(stageNames[stage]))
+        StageInfo info = GetStageInfo(stage);
+        if (info != null && !string.IsNullOrEmpty(info.stageName))
         {
-            return stageNames[stage];
+            return info.stageName;
         }
         return "STAGE." + stage.ToString("00");
     }

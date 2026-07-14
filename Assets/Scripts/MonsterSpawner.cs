@@ -50,6 +50,14 @@ public class MonsterSpawner : MonoBehaviour
             return;
         }
 
+        // 현재 스테이지의 몬스터 종류 중 랜덤으로 골라 이미지/스탯 적용
+        StageInfo info = StageManager.Instance != null ? StageManager.Instance.CurrentStageInfo : null;
+        if (info != null && info.monsters != null && info.monsters.Length > 0)
+        {
+            MonsterVariant v = info.monsters[Random.Range(0, info.monsters.Length)];
+            if (v != null) currentMonster.Initialize(v.hp, v.coinReward, v.sprite);
+        }
+
         // 이 몬스터가 죽으면 다음 몬스터를 스폰하도록 구독
         currentMonster.OnDeath += HandleMonsterDeath;
 

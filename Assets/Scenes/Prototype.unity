@@ -915,20 +915,199 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageManager
   currentStage: 0
-  stageNames:
-  - "STAGE.00 - \uB0AE\uC7A0 \uC232"
-  - "STAGE.01 - \uD3C9\uC628\uD55C \uBC29"
-  - "STAGE.02 - \uD3C9\uC628\uD55C \uBC29"
-  - "STAGE.03 - \uD3C9\uC628\uD55C \uBC29"
-  - "STAGE.04 - \uD3C9\uC628\uD55C \uBC29"
-  - "STAGE.05 - \uD3C9\uC628\uD55C \uBC29"
-  - "STAGE.06 - \uD3C9\uC628\uD55C \uBC29"
-  - "STAGE.07 - \uD3C9\uC628\uD55C \uBC29"
-  - "STAGE.08 - \uD3C9\uC628\uD55C \uBC29"
-  - "STAGE.09 - \uD3C9\uC628\uD55C \uBC29"
-  - "STAGE.10 - \uD3C9\uC628\uD55C \uBC29"
-  - "STAGE.11 - \uD3C9\uC628\uD55C \uBC29"
-  - "STAGE.12 - \uD3C9\uC628\uD55C \uBC29"
+  stages:
+  - stageName: "STAGE.01 - \uB2EC\uBE5B\uC774 \uC2A4\uBA70\uB4DC\uB294 \uBC29 "
+    background: {fileID: 0}
+    monsters:
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    boss:
+      label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+  - stageName: 
+    background: {fileID: 0}
+    monsters:
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    boss:
+      label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+  - stageName: 
+    background: {fileID: 0}
+    monsters:
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    boss:
+      label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+  - stageName: 
+    background: {fileID: 0}
+    monsters:
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    boss:
+      label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+  - stageName: 
+    background: {fileID: 0}
+    monsters:
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    boss:
+      label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+  - stageName: 
+    background: {fileID: 0}
+    monsters:
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    boss:
+      label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+  - stageName: 
+    background: {fileID: 0}
+    monsters:
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    boss:
+      label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+  - stageName: 
+    background: {fileID: 0}
+    monsters:
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    boss:
+      label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+  - stageName: 
+    background: {fileID: 0}
+    monsters:
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    boss:
+      label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+  - stageName: 
+    background: {fileID: 0}
+    monsters:
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    boss:
+      label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+  - stageName: 
+    background: {fileID: 0}
+    monsters:
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    boss:
+      label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+  - stageName: 
+    background: {fileID: 0}
+    monsters:
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    - label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
+    boss:
+      label: 
+      sprite: {fileID: 0}
+      hp: 0
+      coinReward: 0
   killsRequired: 5
   killCount: 0
 --- !u!114 &357495397
