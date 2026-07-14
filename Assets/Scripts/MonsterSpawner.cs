@@ -19,6 +19,7 @@ public class MonsterSpawner : MonoBehaviour
     public PlayerAttack playerAttack;
 
     private EnemyHealth currentMonster;
+    private bool spawningActive = true;
 
     void Start()
     {
@@ -61,8 +62,31 @@ public class MonsterSpawner : MonoBehaviour
 
     void HandleMonsterDeath(EnemyHealth dead)
     {
-        // 중복 호출 방지를 위해 구독 해제 후 다음 몬스터 스폰
+        // 중복 호출 방지를 위해 구독 해제 후, 스폰이 활성 상태일 때만 다음 몬스터 스폰
         dead.OnDeath -= HandleMonsterDeath;
+        if (spawningActive)
+        {
+            SpawnMonster();
+        }
+    }
+
+    /// <summary>일반 몬스터 스폰을 멈추고, 현재 몬스터를 제거한다. (보스전 진입 시)</summary>
+    public void StopAndClear()
+    {
+        spawningActive = false;
+        if (currentMonster != null)
+        {
+            currentMonster.OnDeath -= HandleMonsterDeath;
+            currentMonster.gameObject.SetActive(false); // UI 잔상 방지
+            Destroy(currentMonster.gameObject);
+            currentMonster = null;
+        }
+    }
+
+    /// <summary>일반 몬스터 스폰을 재개하고 새 몬스터를 배치한다. (보스전 종료 시)</summary>
+    public void ResumeSpawning()
+    {
+        spawningActive = true;
         SpawnMonster();
     }
 }
