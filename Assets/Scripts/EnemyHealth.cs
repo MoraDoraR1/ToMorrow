@@ -1,12 +1,14 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
-    public int hp = 20;
+    public int hp = 100;
 
     public void TakeDamage(int damage)
     {
         hp -= damage;
+
+        Debug.Log("적 체력 : " + hp);
 
         if (hp <= 0)
         {
