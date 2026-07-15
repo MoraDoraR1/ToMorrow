@@ -1,0 +1,5 @@
+#이야기 번호,캐릭터 번호,필요 레벨,구매 비용(꿈코인),달 데미지 증가,달 주기 감소(초)
+index,characterIndex,requiredLevel,cost,moonDamageBonus,moonIntervalReduction
+0,0,3,500,20,0.1
+1,1,3,800,30,0.1
+2,2,3,1200,40,0.1

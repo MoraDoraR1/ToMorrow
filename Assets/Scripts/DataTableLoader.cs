@@ -13,6 +13,7 @@ public class DataTableLoader : MonoBehaviour
     [Header("적용 대상 (Instance 대신 직접 참조 — Awake 순서 문제 방지)")]
     public StageManager stageManager;
     public CharacterManager characterManager;
+    public StoryManager storyManager;
     public FullMoonAttack fullMoonAttack;
     public BossManager bossManager;
 
@@ -20,6 +21,7 @@ public class DataTableLoader : MonoBehaviour
     public string stageCsv = "Data/Stage";
     public string monsterCsv = "Data/Monster";
     public string characterCsv = "Data/Character";
+    public string storyCsv = "Data/Story";
     public string balanceCsv = "Data/Balance";
 
     void Awake()
@@ -27,6 +29,7 @@ public class DataTableLoader : MonoBehaviour
         LoadStages();
         LoadMonsters();
         LoadCharacters();
+        LoadStories();
         LoadBalance();
     }
 
@@ -101,6 +104,31 @@ public class DataTableLoader : MonoBehaviour
             c.maxLevel = t.GetInt(r, "maxLevel", c.maxLevel);
             c.levelUpBaseCost = t.GetInt(r, "levelUpBaseCost", c.levelUpBaseCost);
             c.levelUpCostPerLevel = t.GetInt(r, "levelUpCostPerLevel", c.levelUpCostPerLevel);
+        }
+    }
+
+    // Story.csv : index, characterIndex, requiredLevel, cost, moonDamageBonus, moonIntervalReduction
+    void LoadStories()
+    {
+        if (storyManager == null) return;
+        CsvTable t = CsvTable.Load(storyCsv, "index");
+        if (t == null) return;
+
+        for (int r = 0; r < t.RowCount; r++)
+        {
+            int index = t.GetInt(r, "index", -1);
+            StoryData s = storyManager.Get(index);
+            if (s == null)
+            {
+                Debug.LogWarning("DataTableLoader: Story[" + index + "] 가 인스펙터에 없습니다. (건너뜀)");
+                continue;
+            }
+
+            s.characterIndex = t.GetInt(r, "characterIndex", s.characterIndex);
+            s.requiredLevel = t.GetInt(r, "requiredLevel", s.requiredLevel);
+            s.cost = t.GetInt(r, "cost", s.cost);
+            s.moonDamageBonus = t.GetInt(r, "moonDamageBonus", s.moonDamageBonus);
+            s.moonIntervalReduction = t.GetFloat(r, "moonIntervalReduction", s.moonIntervalReduction);
         }
     }
 
