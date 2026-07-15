@@ -36,4 +36,15 @@ public class CurrencyManager : MonoBehaviour
         OnDreamCoinChanged?.Invoke(dreamCoin);
         Debug.Log("꿈 코인 : " + dreamCoin);
     }
+
+    /// <summary>보유량이 충분하면 차감하고 true. 부족하면 아무것도 안 하고 false.</summary>
+    public bool TrySpend(int amount)
+    {
+        if (amount <= 0) return true;
+        if (dreamCoin < amount) return false;
+
+        dreamCoin -= amount;
+        OnDreamCoinChanged?.Invoke(dreamCoin);
+        return true;
+    }
 }

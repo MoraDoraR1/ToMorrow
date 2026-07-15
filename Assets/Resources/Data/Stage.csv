@@ -1,0 +1,4 @@
+#스테이지,#보스 체력,#보스 보상
+stage,bossHp,bossCoinReward
+0,500,50
+1,900,80

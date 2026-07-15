@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 883, y: 288}
+  m_AnchoredPosition: {x: 887, y: 275}
   m_SizeDelta: {x: 113.9369, y: 105.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &19545099
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 112746790}
   - component: {fileID: 112746789}
   m_Layer: 5
-  m_Name: Shop_UI
+  m_Name: Shop_UI_Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -758,9 +758,9 @@ Transform:
   - {fileID: 325594229}
   - {fileID: 1179332327}
   - {fileID: 901688311}
-  - {fileID: 748994260}
   - {fileID: 1809306680}
   - {fileID: 263165219}
+  - {fileID: 748994260}
   m_Father: {fileID: 453157828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &325594228
@@ -851,6 +851,8 @@ GameObject:
   - component: {fileID: 357495393}
   - component: {fileID: 357495396}
   - component: {fileID: 357495397}
+  - component: {fileID: 357495398}
+  - component: {fileID: 357495399}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1131,6 +1133,119 @@ MonoBehaviour:
   bossDuration: 20
   timerText: {fileID: 0}
   timerTmpText: {fileID: 1486315895}
+--- !u!114 &357495398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357495392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1671cd6850151ba498b58007e1c9b4ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterManager
+  characters:
+  - characterName: "\uC584\uB8E8"
+    sprite: {fileID: 21300000, guid: 40b954859ee3f184fb62cbcfb03a5dbd, type: 3}
+    unlockCost: 0
+    baseDamage: 0
+    damagePerLevel: 1
+    maxLevel: 200
+    levelUpBaseCost: 1
+    levelUpCostPerLevel: 5
+    unlocked: 1
+    level: 0
+  - characterName: "\uB69C\uB9AC"
+    sprite: {fileID: 21300000, guid: 8eb0e3d9dc0408e4ab3f19292d83f50a, type: 3}
+    unlockCost: 500
+    baseDamage: 5
+    damagePerLevel: 5
+    maxLevel: 200
+    levelUpBaseCost: 50
+    levelUpCostPerLevel: 50
+    unlocked: 0
+    level: 1
+  - characterName: 
+    sprite: {fileID: 0}
+    unlockCost: 0
+    baseDamage: 0
+    damagePerLevel: 0
+    maxLevel: 0
+    levelUpBaseCost: 0
+    levelUpCostPerLevel: 0
+    unlocked: 0
+    level: 0
+  - characterName: 
+    sprite: {fileID: 0}
+    unlockCost: 0
+    baseDamage: 0
+    damagePerLevel: 0
+    maxLevel: 0
+    levelUpBaseCost: 0
+    levelUpCostPerLevel: 0
+    unlocked: 0
+    level: 0
+  - characterName: 
+    sprite: {fileID: 0}
+    unlockCost: 0
+    baseDamage: 0
+    damagePerLevel: 0
+    maxLevel: 0
+    levelUpBaseCost: 0
+    levelUpCostPerLevel: 0
+    unlocked: 0
+    level: 0
+  - characterName: 
+    sprite: {fileID: 0}
+    unlockCost: 0
+    baseDamage: 0
+    damagePerLevel: 0
+    maxLevel: 0
+    levelUpBaseCost: 0
+    levelUpCostPerLevel: 0
+    unlocked: 0
+    level: 0
+  - characterName: 
+    sprite: {fileID: 0}
+    unlockCost: 0
+    baseDamage: 0
+    damagePerLevel: 0
+    maxLevel: 0
+    levelUpBaseCost: 0
+    levelUpCostPerLevel: 0
+    unlocked: 0
+    level: 0
+  - characterName: 
+    sprite: {fileID: 0}
+    unlockCost: 0
+    baseDamage: 0
+    damagePerLevel: 0
+    maxLevel: 0
+    levelUpBaseCost: 0
+    levelUpCostPerLevel: 0
+    unlocked: 0
+    level: 0
+--- !u!114 &357495399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357495392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f79f9597dffb4348a426de7a722038c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DataTableLoader
+  stageManager: {fileID: 357495396}
+  characterManager: {fileID: 357495398}
+  fullMoonAttack: {fileID: 1696875483}
+  bossManager: {fileID: 357495397}
+  stageCsv: Data/Stage
+  monsterCsv: Data/Monster
+  characterCsv: Data/Character
+  balanceCsv: Data/Balance
 --- !u!1 &395106712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,8 +2402,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 643.11774, y: 446.75195}
-  m_SizeDelta: {x: 633.7645, y: 186.4962}
+  m_AnchoredPosition: {x: 643.11774, y: 440.3}
+  m_SizeDelta: {x: 633.7645, y: 199.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &970914964
 MonoBehaviour:
@@ -3946,7 +4061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 1, b: 0.019749641, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

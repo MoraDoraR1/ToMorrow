@@ -28,6 +28,12 @@ public class StageManager : MonoBehaviour
     public string CurrentStageName => GetStageName(currentStage);
     public StageInfo CurrentStageInfo => GetStageInfo(currentStage);
 
+    /// <summary>데이터 테이블에서 보스 도전 필요 처치 수를 주입한다.</summary>
+    public void SetKillsRequired(int value)
+    {
+        killsRequired = Mathf.Max(1, value);
+    }
+
     /// <summary>스테이지 번호에 해당하는 테마 데이터를 돌려준다. 범위를 벗어나면 null.</summary>
     public StageInfo GetStageInfo(int stage)
     {

@@ -69,5 +69,11 @@ public class PlayerAttack : MonoBehaviour
         Vector2 direction = ((Vector2)enemyTarget.position - (Vector2)firePoint.position).normalized;
         projectileScript.SetDirection(direction);
         projectileScript.SetTarget(enemyTarget);
+
+        // 클릭 데미지는 해금된 캐릭터들의 스탯 합계 (없으면 프리팹 기본값 유지)
+        if (CharacterManager.Instance != null)
+        {
+            projectileScript.SetDamage(CharacterManager.Instance.TotalClickDamage);
+        }
     }
 }

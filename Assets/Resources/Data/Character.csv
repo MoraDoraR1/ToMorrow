@@ -1,0 +1,5 @@
+#캐릭터 번호,해금 비용(꿈코인),기본 데미지(LV1),레벨당 데미지 증가,최대 레벨,레벨업 기본 비용,레벨업 비용 증가/레벨
+index,unlockCost,baseDamage,damagePerLevel,maxLevel,levelUpBaseCost,levelUpCostPerLevel
+0,0,10,2,200,50,10
+1,100,5,1,200,40,8
+2,300,8,2,200,60,12

@@ -1,0 +1,6 @@
+#키,#수치,#설명
+key,value,note
+moonDamage,100,
+moonInterval,1,
+bossDuration,20,
+killsRequired,50,

@@ -41,6 +41,11 @@ public class Projectile : MonoBehaviour
         targetRect = target;
     }
 
+    public void SetDamage(int dmg)
+    {
+        damage = dmg;
+    }
+
     void Update()
     {
         if (hasHit) return;
