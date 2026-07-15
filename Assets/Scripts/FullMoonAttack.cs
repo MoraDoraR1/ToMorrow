@@ -23,22 +23,26 @@ public class FullMoonAttack : MonoBehaviour
 
     private float timer;
 
-    /// <summary>기본 데미지 + 구매한 이야기들의 강화량.</summary>
+    /// <summary>기본 데미지 + 이야기 강화 + 별자리 보너스.</summary>
     public int CurrentDamage
     {
         get
         {
-            int bonus = StoryManager.Instance != null ? StoryManager.Instance.TotalMoonDamageBonus : 0;
+            int bonus = 0;
+            if (StoryManager.Instance != null) bonus += StoryManager.Instance.TotalMoonDamageBonus;
+            if (ConstellationManager.Instance != null) bonus += ConstellationManager.Instance.TotalMoonDamageBonus;
             return damage + bonus;
         }
     }
 
-    /// <summary>기본 주기 − 이야기 감소량 (minInterval 밑으로는 안 내려감).</summary>
+    /// <summary>기본 주기 − 이야기 감소 − 별자리 감소 (minInterval 밑으로는 안 내려감).</summary>
     public float CurrentInterval
     {
         get
         {
-            float reduction = StoryManager.Instance != null ? StoryManager.Instance.TotalMoonIntervalReduction : 0f;
+            float reduction = 0f;
+            if (StoryManager.Instance != null) reduction += StoryManager.Instance.TotalMoonIntervalReduction;
+            if (ConstellationManager.Instance != null) reduction += ConstellationManager.Instance.TotalMoonIntervalReduction;
             return Mathf.Max(minInterval, interval - reduction);
         }
     }

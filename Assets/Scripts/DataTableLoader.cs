@@ -14,6 +14,7 @@ public class DataTableLoader : MonoBehaviour
     public StageManager stageManager;
     public CharacterManager characterManager;
     public StoryManager storyManager;
+    public ConstellationManager constellationManager;
     public FullMoonAttack fullMoonAttack;
     public BossManager bossManager;
 
@@ -22,6 +23,7 @@ public class DataTableLoader : MonoBehaviour
     public string monsterCsv = "Data/Monster";
     public string characterCsv = "Data/Character";
     public string storyCsv = "Data/Story";
+    public string constellationCsv = "Data/Constellation";
     public string balanceCsv = "Data/Balance";
 
     void Awake()
@@ -30,6 +32,7 @@ public class DataTableLoader : MonoBehaviour
         LoadMonsters();
         LoadCharacters();
         LoadStories();
+        LoadConstellations();
         LoadBalance();
     }
 
@@ -129,6 +132,32 @@ public class DataTableLoader : MonoBehaviour
             s.cost = t.GetInt(r, "cost", s.cost);
             s.moonDamageBonus = t.GetInt(r, "moonDamageBonus", s.moonDamageBonus);
             s.moonIntervalReduction = t.GetFloat(r, "moonIntervalReduction", s.moonIntervalReduction);
+        }
+    }
+
+    // Constellation.csv : index, starCount, unlockStage, starBaseCost, starCostIncrease, effectType, effectValue
+    void LoadConstellations()
+    {
+        if (constellationManager == null) return;
+        CsvTable t = CsvTable.Load(constellationCsv, "index");
+        if (t == null) return;
+
+        for (int r = 0; r < t.RowCount; r++)
+        {
+            int index = t.GetInt(r, "index", -1);
+            ConstellationData c = constellationManager.Get(index);
+            if (c == null)
+            {
+                Debug.LogWarning("DataTableLoader: Constellation[" + index + "] 가 인스펙터에 없습니다. (건너뜀)");
+                continue;
+            }
+
+            c.starCount = t.GetInt(r, "starCount", c.starCount);
+            c.unlockStage = t.GetInt(r, "unlockStage", c.unlockStage);
+            c.starBaseCost = t.GetInt(r, "starBaseCost", c.starBaseCost);
+            c.starCostIncrease = t.GetInt(r, "starCostIncrease", c.starCostIncrease);
+            c.effectType = (ConstellationEffectType)t.GetInt(r, "effectType", (int)c.effectType);
+            c.effectValue = t.GetFloat(r, "effectValue", c.effectValue);
         }
     }
 

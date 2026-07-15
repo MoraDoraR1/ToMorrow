@@ -60,10 +60,14 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
-        // 처치 보상: 꿈 코인 지급
+        // 처치 보상: 꿈 코인 지급 (완성한 별자리의 획득량 보너스 적용)
         if (CurrencyManager.Instance != null)
         {
-            CurrencyManager.Instance.AddDreamCoin(coinReward);
+            float bonus = ConstellationManager.Instance != null
+                ? ConstellationManager.Instance.TotalCoinGainBonus
+                : 0f;
+            int reward = Mathf.RoundToInt(coinReward * (1f + bonus));
+            CurrencyManager.Instance.AddDreamCoin(reward);
         }
 
         // 스테이지 처치 수 등록 (보스는 countsTowardStage=false로 제외)

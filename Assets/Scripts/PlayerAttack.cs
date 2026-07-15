@@ -70,10 +70,16 @@ public class PlayerAttack : MonoBehaviour
         projectileScript.SetDirection(direction);
         projectileScript.SetTarget(enemyTarget);
 
-        // 클릭 데미지는 해금된 캐릭터들의 스탯 합계 (없으면 프리팹 기본값 유지)
+        // 클릭 데미지 = 해금된 캐릭터 스탯 합계 + 완성한 별자리 보너스
+        // (CharacterManager가 없으면 프리팹 기본값을 그대로 쓴다)
         if (CharacterManager.Instance != null)
         {
-            projectileScript.SetDamage(CharacterManager.Instance.TotalClickDamage);
+            int dmg = CharacterManager.Instance.TotalClickDamage;
+            if (ConstellationManager.Instance != null)
+            {
+                dmg += ConstellationManager.Instance.TotalClickDamageBonus;
+            }
+            projectileScript.SetDamage(dmg);
         }
     }
 }
