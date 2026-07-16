@@ -23,6 +23,9 @@ public class FullMoonAttack : MonoBehaviour
 
     private float timer;
 
+    /// <summary>직전 자동공격이 치명타였는지. (연출/디버그용)</summary>
+    public bool LastAttackWasCritical { get; private set; }
+
     /// <summary>기본 데미지 + 이야기 강화 + 별자리 보너스.</summary>
     public int CurrentDamage
     {
@@ -67,7 +70,10 @@ public class FullMoonAttack : MonoBehaviour
         EnemyHealth enemy = target.GetComponent<EnemyHealth>();
         if (enemy != null)
         {
-            enemy.TakeDamage(CurrentDamage);
+            // 달의 치명타는 기본 + 별자리 + 이야기 (기획서 2.7)
+            int dmg = CombatStats.RollMoon(CurrentDamage, out bool isCrit);
+            LastAttackWasCritical = isCrit;
+            enemy.TakeDamage(dmg);
         }
     }
 }

@@ -1530,6 +1530,7 @@ GameObject:
   - component: {fileID: 357495407}
   - component: {fileID: 357495408}
   - component: {fileID: 357495409}
+  - component: {fileID: 357495410}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1991,6 +1992,7 @@ MonoBehaviour:
   fullMoonAttack: {fileID: 1696875483}
   bossManager: {fileID: 357495397}
   offlineReward: {fileID: 357495409}
+  combatStats: {fileID: 357495410}
   stageCsv: Data/Stage
   monsterCsv: Data/Monster
   characterCsv: Data/Character
@@ -2035,6 +2037,8 @@ MonoBehaviour:
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
+    moonCritChanceBonus: 0
+    moonCritDamageBonus: 0
     purchased: 0
   - characterIndex: 1
     title: "\uB69C\uB9AC\uC758 \uD68C\uC0C1"
@@ -2044,6 +2048,8 @@ MonoBehaviour:
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
+    moonCritChanceBonus: 0
+    moonCritDamageBonus: 0
     purchased: 0
   - characterIndex: 0
     title: "\uB098\uB978\uC758 \uD68C\uC0C1"
@@ -2053,6 +2059,8 @@ MonoBehaviour:
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
+    moonCritChanceBonus: 0
+    moonCritDamageBonus: 0
     purchased: 0
   - characterIndex: 0
     title: "\uD3EC\uD3EC\uC758 \uD68C\uC0C1"
@@ -2062,6 +2070,8 @@ MonoBehaviour:
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
+    moonCritChanceBonus: 0
+    moonCritDamageBonus: 0
     purchased: 0
   - characterIndex: 0
     title: "\uBBF8\uBC0D\uC758 \uD68C\uC0C1"
@@ -2071,6 +2081,8 @@ MonoBehaviour:
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
+    moonCritChanceBonus: 0
+    moonCritDamageBonus: 0
     purchased: 0
   - characterIndex: 0
     title: "\uBB34\uBB34\uC758 \uD68C\uC0C1"
@@ -2080,6 +2092,8 @@ MonoBehaviour:
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
+    moonCritChanceBonus: 0
+    moonCritDamageBonus: 0
     purchased: 0
   - characterIndex: 0
     title: "\uCFE0\uC6B8\uC758 \uD68C\uC0C1"
@@ -2089,6 +2103,8 @@ MonoBehaviour:
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
+    moonCritChanceBonus: 0
+    moonCritDamageBonus: 0
     purchased: 0
   - characterIndex: 0
     title: "\uD1A0\uB3C4\uC758 \uD68C\uC0C1"
@@ -2098,6 +2114,8 @@ MonoBehaviour:
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
+    moonCritChanceBonus: 0
+    moonCritDamageBonus: 0
     purchased: 0
 --- !u!114 &357495402
 MonoBehaviour:
@@ -2364,6 +2382,20 @@ MonoBehaviour:
   maxHours: 8
   minMinutes: 1
   format: "\uC790\uB294 \uB3D9\uC548 {0}\n\uAFC8\uCF54\uC778 {1}\uAC1C\uB97C \uBAA8\uC558\uC2B5\uB2C8\uB2E4."
+--- !u!114 &357495410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357495392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de7684a489ed2cd4f94f86f60e9a5528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CombatStats
+  baseCritChance: 0.05
+  baseCritMultiplier: 2
 --- !u!1 &359111757
 GameObject:
   m_ObjectHideFlags: 0
@@ -4935,7 +4967,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1823988182, guid: 156ec492e516ccb4099add479601d65e, type: 3}
+  m_Sprite: {fileID: -1400345381, guid: 6d1a2570067e3ae4cb5c72a2bca3b8d5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4970,7 +5002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -15}
+  m_AnchoredPosition: {x: 0, y: -76}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &940538851
@@ -7742,8 +7774,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.4048, y: 64.343506}
-  m_SizeDelta: {x: 444.6495, y: 62.687}
+  m_AnchoredPosition: {x: -3.4048, y: 40.56244}
+  m_SizeDelta: {x: 444.6495, y: 110.2491}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1709354660
 CanvasRenderer:
@@ -7775,11 +7807,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 60
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -8864,8 +8896,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -1955045057, guid: 6d1a2570067e3ae4cb5c72a2bca3b8d5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

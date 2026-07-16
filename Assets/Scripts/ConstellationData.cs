@@ -7,6 +7,8 @@ public enum ConstellationEffectType
     MoonDamage  = 1,   // 달 자동공격 데미지 +value
     MoonSpeed   = 2,   // 달 자동공격 주기 -value 초 (빨라짐)
     CoinGain    = 3,   // 꿈코인 획득량 +value 비율 (0.2 = +20%)
+    CritChance  = 4,   // 치명타 확률 +value 비율 (0.05 = +5%) — 클릭·달 모두에 적용
+    CritDamage  = 5,   // 치명타 피해 배율 +value (0.5 = 피해 +50%p) — 클릭·달 모두에 적용
 }
 
 /// <summary>

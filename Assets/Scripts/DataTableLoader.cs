@@ -18,6 +18,7 @@ public class DataTableLoader : MonoBehaviour
     public FullMoonAttack fullMoonAttack;
     public BossManager bossManager;
     public OfflineReward offlineReward;
+    public CombatStats combatStats;
 
     [Header("CSV 경로 (Resources 아래, 확장자 제외)")]
     public string stageCsv = "Data/Stage";
@@ -133,6 +134,8 @@ public class DataTableLoader : MonoBehaviour
             s.cost = t.GetInt(r, "cost", s.cost);
             s.moonDamageBonus = t.GetInt(r, "moonDamageBonus", s.moonDamageBonus);
             s.moonIntervalReduction = t.GetFloat(r, "moonIntervalReduction", s.moonIntervalReduction);
+            s.moonCritChanceBonus = t.GetFloat(r, "moonCritChanceBonus", s.moonCritChanceBonus);
+            s.moonCritDamageBonus = t.GetFloat(r, "moonCritDamageBonus", s.moonCritDamageBonus);
         }
     }
 
@@ -192,6 +195,12 @@ public class DataTableLoader : MonoBehaviour
                     break;
                 case "offlineMaxHours":
                     if (offlineReward != null) offlineReward.maxHours = t.GetFloat(r, "value", offlineReward.maxHours);
+                    break;
+                case "critChance":
+                    if (combatStats != null) combatStats.baseCritChance = t.GetFloat(r, "value", combatStats.baseCritChance);
+                    break;
+                case "critMultiplier":
+                    if (combatStats != null) combatStats.baseCritMultiplier = t.GetFloat(r, "value", combatStats.baseCritMultiplier);
                     break;
                 default:
                     Debug.LogWarning("DataTableLoader: Balance.csv 에 모르는 key → " + key);

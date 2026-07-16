@@ -79,6 +79,12 @@ public class PlayerAttack : MonoBehaviour
             {
                 dmg += ConstellationManager.Instance.TotalClickDamageBonus;
             }
+
+            // 치명타는 여기서 굴린다 — 데미지가 투사체에 실려 날아가므로 명중 시점이 아니라
+            // 발사 시점에 확정돼야 한다.
+            dmg = CombatStats.RollClick(dmg, out bool isCrit);
+            projectileScript.SetCritical(isCrit);
+
             projectileScript.SetDamage(dmg);
         }
     }

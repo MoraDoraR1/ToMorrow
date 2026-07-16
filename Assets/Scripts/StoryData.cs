@@ -31,6 +31,12 @@ public class StoryData
     [Header("달 영구 강화 — 공격 주기 감소량(초, 작을수록 빨라짐)")]
     public float moonIntervalReduction = 0.05f;
 
+    [Header("달 영구 강화 — 치명타 확률 증가 (0.02 = +2%)")]
+    public float moonCritChanceBonus = 0f;
+
+    [Header("달 영구 강화 — 치명타 피해 배율 증가 (0.1 = +10%p)")]
+    public float moonCritDamageBonus = 0f;
+
     [Header("--- 런타임 상태 ---")]
     public bool purchased = false;
 }

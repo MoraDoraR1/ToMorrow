@@ -120,6 +120,12 @@ public class ConstellationManager : MonoBehaviour
     /// <summary>꿈코인 획득 추가 비율 (0.2 = +20%).</summary>
     public float TotalCoinGainBonus => SumEffect(ConstellationEffectType.CoinGain);
 
+    /// <summary>치명타 확률 추가분 (0.05 = +5%). 클릭·달 모두에 적용된다.</summary>
+    public float TotalCritChanceBonus => SumEffect(ConstellationEffectType.CritChance);
+
+    /// <summary>치명타 피해 배율 추가분 (0.5 = +50%p). 클릭·달 모두에 적용된다.</summary>
+    public float TotalCritDamageBonus => SumEffect(ConstellationEffectType.CritDamage);
+
     /// <summary>UI/로그에 보여줄 효과 설명.</summary>
     public string DescribeEffect(ConstellationData c)
     {
@@ -130,6 +136,8 @@ public class ConstellationManager : MonoBehaviour
             case ConstellationEffectType.MoonDamage:  return "달 데미지 +" + Mathf.RoundToInt(c.effectValue);
             case ConstellationEffectType.MoonSpeed:   return "달 공격주기 -" + c.effectValue + "초";
             case ConstellationEffectType.CoinGain:    return "꿈코인 획득 +" + Mathf.RoundToInt(c.effectValue * 100f) + "%";
+            case ConstellationEffectType.CritChance:  return "치명타 확률 +" + Mathf.RoundToInt(c.effectValue * 100f) + "%";
+            case ConstellationEffectType.CritDamage:  return "치명타 피해 +" + Mathf.RoundToInt(c.effectValue * 100f) + "%";
         }
         return "";
     }

@@ -70,6 +70,40 @@ public class StoryManager : MonoBehaviour
         }
     }
 
+    /// <summary>구매한 이야기들의 달 치명타 확률 증가 합. (기획서 2.7)</summary>
+    public float TotalMoonCritChanceBonus
+    {
+        get
+        {
+            float sum = 0f;
+            if (stories != null)
+            {
+                foreach (StoryData s in stories)
+                {
+                    if (s != null && s.purchased) sum += s.moonCritChanceBonus;
+                }
+            }
+            return sum;
+        }
+    }
+
+    /// <summary>구매한 이야기들의 달 치명타 피해 증가 합. (기획서 2.7)</summary>
+    public float TotalMoonCritDamageBonus
+    {
+        get
+        {
+            float sum = 0f;
+            if (stories != null)
+            {
+                foreach (StoryData s in stories)
+                {
+                    if (s != null && s.purchased) sum += s.moonCritDamageBonus;
+                }
+            }
+            return sum;
+        }
+    }
+
     /// <summary>이야기가 열렸는가 — 해당 캐릭터가 해금됐고 필요 레벨 이상.</summary>
     public bool IsUnlocked(int index)
     {

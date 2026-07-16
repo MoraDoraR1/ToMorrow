@@ -19,6 +19,7 @@ public class Projectile : MonoBehaviour
     private RectTransform rectTransform;
     private RectTransform targetRect;
     private bool hasHit = false;
+    private bool isCritical = false;
 
     void Awake()
     {
@@ -45,6 +46,15 @@ public class Projectile : MonoBehaviour
     {
         damage = dmg;
     }
+
+    /// <summary>이 투사체가 치명타인지. (발사 시점에 이미 굴려진 결과를 받는다 — 연출용)</summary>
+    public void SetCritical(bool crit)
+    {
+        isCritical = crit;
+    }
+
+    /// <summary>치명타 여부. 명중 연출/로그에 쓴다.</summary>
+    public bool IsCritical => isCritical;
 
     void Update()
     {
