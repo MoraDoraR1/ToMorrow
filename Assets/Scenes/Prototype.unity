@@ -1594,211 +1594,263 @@ MonoBehaviour:
   currentStage: 0
   stages:
   - stageName: "STAGE.00 - \uB2EC\uBE5B\uC774 \uC2A4\uBA70\uB4DC\uB294 \uBC29 "
-    background: {fileID: 21300000, guid: d5dbc47172655da4da45433884e609c8, type: 3}
+    background: {fileID: 21300000, guid: bcde562448dcd9548b3fddf01d8a14ba, type: 3}
     monsters:
-    - label: 
-      sprite: {fileID: 21300000, guid: 40b954859ee3f184fb62cbcfb03a5dbd, type: 3}
-      hp: 100
-      coinReward: 5
-    - label: 
-      sprite: {fileID: 21300000, guid: 8eb0e3d9dc0408e4ab3f19292d83f50a, type: 3}
-      hp: 150
-      coinReward: 10
+    - label: "\uC2A4\uD14C\uC774\uC9C01 \uBAAC\uC2A4\uD1301"
+      sprite: {fileID: 21300000, guid: 8a3ab450084609e43b57c7a7d0b35384, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C01 \uBAAC\uC2A4\uD1302"
+      sprite: {fileID: 21300000, guid: 1b4eb80bd2344cb4cb90e98e1b060f15, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C01 \uBAAC\uC2A4\uD1303"
+      sprite: {fileID: 21300000, guid: 769c26ff96951564883c1b917127755f, type: 3}
+      hp: 0
+      coinReward: 0
     boss:
-      label: 
-      sprite: {fileID: 21300000, guid: 8eb0e3d9dc0408e4ab3f19292d83f50a, type: 3}
+      label: "\uC2A4\uD14C\uC774\uC9C01 \uBCF4\uC2A4"
+      sprite: {fileID: 21300000, guid: e4e3233479077c54e94fb06273704da3, type: 3}
       hp: 500
       coinReward: 500
   - stageName: "STAGE.01 - \uB05D\uB098\uC9C0 \uC54A\uC740 \uACFC\uC81C\uC758 \uBC29"
-    background: {fileID: 21300000, guid: 8eb0e3d9dc0408e4ab3f19292d83f50a, type: 3}
+    background: {fileID: 21300000, guid: 5fdf4227c80373c418d28a017df336ff, type: 3}
     monsters:
-    - label: 
-      sprite: {fileID: 21300000, guid: 40b954859ee3f184fb62cbcfb03a5dbd, type: 3}
-      hp: 250
-      coinReward: 50
-    - label: 
-      sprite: {fileID: 21300000, guid: 8eb0e3d9dc0408e4ab3f19292d83f50a, type: 3}
-      hp: 400
-      coinReward: 80
+    - label: "\uC2A4\uD14C\uC774\uC9C02 \uBAAC\uC2A4\uD1301"
+      sprite: {fileID: 21300000, guid: 5b09ea86356d488409f222ea705c1c63, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C02 \uBAAC\uC2A4\uD1302"
+      sprite: {fileID: 21300000, guid: 56a724b9abfeba44a9dbdb0a8c961616, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C02 \uBAAC\uC2A4\uD1303"
+      sprite: {fileID: 21300000, guid: 8bc72264cec0307469af56ba5905e569, type: 3}
+      hp: 0
+      coinReward: 0
     boss:
-      label: 
-      sprite: {fileID: 21300000, guid: 8eb0e3d9dc0408e4ab3f19292d83f50a, type: 3}
+      label: "\uC2A4\uD14C\uC774\uC9C02 \uBCF4\uC2A4"
+      sprite: {fileID: 21300000, guid: 2a87ec358196ca942b2809b936c7f67c, type: 3}
       hp: 1000
       coinReward: 9000
-  - stageName: 
-    background: {fileID: 0}
+  - stageName: "STAGE.02 - \uC54C\uB78C\uC774 \uC6B8\uB9AC\uB294 \uC881\uC740 \uC790\uCDE8\uBC29"
+    background: {fileID: 21300000, guid: 968d2ed0761fc0947ab70c5c61208726, type: 3}
     monsters:
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C03 \uBAAC\uC2A4\uD1301"
+      sprite: {fileID: 21300000, guid: 2679fa284fd41a84fa4b847f373f3fca, type: 3}
       hp: 0
       coinReward: 0
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C03 \uBAAC\uC2A4\uD1302"
+      sprite: {fileID: 21300000, guid: 1d0eb8dea15605a40940ad16630a6b28, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C03 \uBAAC\uC2A4\uD1303"
+      sprite: {fileID: 21300000, guid: 93a67ac8db3bf2942b303ee92d9cb18a, type: 3}
       hp: 0
       coinReward: 0
     boss:
-      label: 
-      sprite: {fileID: 0}
+      label: "\uC2A4\uD14C\uC774\uC9C03 \uBCF4\uC2A4"
+      sprite: {fileID: 21300000, guid: fec03509fef26604cb3d1f70b0866d6c, type: 3}
       hp: 0
       coinReward: 0
-  - stageName: 
-    background: {fileID: 0}
+  - stageName: "STAGE.03 - \uBD88 \uAEBC\uC9C4 \uC801\uB9C9\uD55C \uC0AC\uBB34\uC2E4"
+    background: {fileID: 21300000, guid: 259df0e643f44224397c65282bd0ed9e, type: 3}
     monsters:
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C04 \uBAAC\uC2A4\uD1301"
+      sprite: {fileID: 21300000, guid: ff30fe783f9433048aa228a69582de2a, type: 3}
       hp: 0
       coinReward: 0
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C04 \uBAAC\uC2A4\uD1302"
+      sprite: {fileID: 21300000, guid: 8340b07b30794024fb8fe6aa55151cdd, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C04 \uBAAC\uC2A4\uD1303"
+      sprite: {fileID: 21300000, guid: c31418754aca88340b081505b2d810c2, type: 3}
       hp: 0
       coinReward: 0
     boss:
-      label: 
-      sprite: {fileID: 0}
+      label: "\uC2A4\uD14C\uC774\uC9C04 \uBCF4\uC2A4"
+      sprite: {fileID: 21300000, guid: 15a8394949406ed4a8259e181c59f9bf, type: 3}
       hp: 0
       coinReward: 0
-  - stageName: 
-    background: {fileID: 0}
+  - stageName: "STAGE.04 - \uC18C\uB780\uC2A4\uB7EC\uC6B4 \uD68C\uC2DD \uC790\uB9AC"
+    background: {fileID: 21300000, guid: e4c1dbff6abaff841984f34cb533fedd, type: 3}
     monsters:
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C05 \uBAAC\uC2A4\uD1301"
+      sprite: {fileID: 21300000, guid: 0eb1bc940a58da243a20a8522bf681bb, type: 3}
       hp: 0
       coinReward: 0
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C05 \uBAAC\uC2A4\uD1302"
+      sprite: {fileID: 21300000, guid: f533e5c9a7676eb49b04f6cede9d69b3, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C05 \uBAAC\uC2A4\uD1303"
+      sprite: {fileID: 21300000, guid: 8c4bab3a0e2295340b02fdf248482d7b, type: 3}
       hp: 0
       coinReward: 0
     boss:
-      label: 
-      sprite: {fileID: 0}
+      label: "\uC2A4\uD14C\uC774\uC9C05 \uBCF4\uC2A4"
+      sprite: {fileID: 21300000, guid: 1d72d3687fdd2444a9f430b4ec444b28, type: 3}
       hp: 0
       coinReward: 0
-  - stageName: 
-    background: {fileID: 0}
+  - stageName: "STAGE.05 - \uC881\uACE0 \uCC28\uAC00\uC6B4 \uC790\uCDE8\uBC29"
+    background: {fileID: 21300000, guid: 9e572615012d56e42bac9004e9ee4200, type: 3}
     monsters:
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C06 \uBAAC\uC2A4\uD1301"
+      sprite: {fileID: 21300000, guid: e39cdc7fdf5a39242984dfda6702410a, type: 3}
       hp: 0
       coinReward: 0
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C06 \uBAAC\uC2A4\uD1302"
+      sprite: {fileID: 21300000, guid: 405fb5afe3a75ef4b999561d7a9ddcfc, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C06 \uBAAC\uC2A4\uD1303"
+      sprite: {fileID: 21300000, guid: 8892d567dca1f644597b186ae03f86fb, type: 3}
       hp: 0
       coinReward: 0
     boss:
-      label: 
-      sprite: {fileID: 0}
+      label: "\uC2A4\uD14C\uC774\uC9C06 \uBCF4\uC2A4"
+      sprite: {fileID: 21300000, guid: 7117fd1e65905164fbe7089caae6f343, type: 3}
       hp: 0
       coinReward: 0
-  - stageName: 
-    background: {fileID: 0}
+  - stageName: "STAGE.06 - \uBAA8\uB2E5\uBD88\uC774 \uAEBC\uC838\uAC00\uB294 \uCEA0\uD551\uC7A5"
+    background: {fileID: 21300000, guid: 5c6de7eac89feb242aee4173ea45c793, type: 3}
     monsters:
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C07 \uBAAC\uC2A4\uD1301"
+      sprite: {fileID: 21300000, guid: aca18db8b198a54408f148ddb9479545, type: 3}
       hp: 0
       coinReward: 0
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C07 \uBAAC\uC2A4\uD1302"
+      sprite: {fileID: 21300000, guid: c9e9cb56dd5b4224fa26cd5885856630, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C07 \uBAAC\uC2A4\uD1303"
+      sprite: {fileID: 21300000, guid: 878216b201144f047816e6e12e52450d, type: 3}
       hp: 0
       coinReward: 0
     boss:
-      label: 
-      sprite: {fileID: 0}
+      label: "\uC2A4\uD14C\uC774\uC9C07 \uBCF4\uC2A4"
+      sprite: {fileID: 21300000, guid: 9c5957b697d6f274c864a8d97fb683bc, type: 3}
       hp: 0
       coinReward: 0
-  - stageName: 
-    background: {fileID: 0}
+  - stageName: "STAGE.07 - \uC54C\uBC14 \uD734\uAC8C\uC2E4 \uC18C\uD30C"
+    background: {fileID: 21300000, guid: b4c18e39606ba184893e405fd8a8d96c, type: 3}
     monsters:
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C08 \uBAAC\uC2A4\uD1301"
+      sprite: {fileID: 21300000, guid: 91d080b3e45f1354ea1ff37cb0f4f5bd, type: 3}
       hp: 0
       coinReward: 0
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C08 \uBAAC\uC2A4\uD1302"
+      sprite: {fileID: 21300000, guid: 390c0bdc91340de4ca90dfeaeec83f2f, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C08 \uBAAC\uC2A4\uD1303"
+      sprite: {fileID: 21300000, guid: 3db9550a87fa4c947837213aa5509a07, type: 3}
       hp: 0
       coinReward: 0
     boss:
-      label: 
-      sprite: {fileID: 0}
+      label: "\uC2A4\uD14C\uC774\uC9C08 \uBCF4\uC2A4"
+      sprite: {fileID: 21300000, guid: 629d596851df98342b5900c3ec0441ad, type: 3}
       hp: 0
       coinReward: 0
-  - stageName: 
-    background: {fileID: 0}
+  - stageName: "STAGE.08 - \uC57C\uADFC \uD544\uC218 \uC624\uD53C\uC2A4"
+    background: {fileID: 21300000, guid: 086dd26101319784c9c122bb1e71fc90, type: 3}
     monsters:
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C09 \uBAAC\uC2A4\uD1301"
+      sprite: {fileID: 21300000, guid: 73c9a789806ca0b4cb0d519b7a1833a5, type: 3}
       hp: 0
       coinReward: 0
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C09 \uBAAC\uC2A4\uD1302"
+      sprite: {fileID: 21300000, guid: 84a9e222d26cfe44fa8dc6a62abc5761, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C09 \uBAAC\uC2A4\uD1303"
+      sprite: {fileID: 21300000, guid: 02c7ea6fc6f1e7444a0e6c9fd2159842, type: 3}
       hp: 0
       coinReward: 0
     boss:
-      label: 
-      sprite: {fileID: 0}
+      label: "\uC2A4\uD14C\uC774\uC9C09 \uBCF4\uC2A4"
+      sprite: {fileID: 21300000, guid: 3ab9e49b7715c714db687438a152beca, type: 3}
       hp: 0
       coinReward: 0
-  - stageName: 
-    background: {fileID: 0}
+  - stageName: "STAGE.09 - \uB4A4\uCC99\uC774\uB294 \uC0DD\uAC01\uC758 \uC815\uAC70\uC7A5"
+    background: {fileID: 21300000, guid: 267ce572fd320df49a6d697c5f6a2fe3, type: 3}
     monsters:
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C010 \uBAAC\uC2A4\uD1301"
+      sprite: {fileID: 21300000, guid: ccf74ab5dd9c61f46bd1d6c5f833dfe6, type: 3}
       hp: 0
       coinReward: 0
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C010 \uBAAC\uC2A4\uD1302"
+      sprite: {fileID: 21300000, guid: 5f682928f2ecbf149b79e544be0a2fdc, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C010 \uBAAC\uC2A4\uD1303"
+      sprite: {fileID: 21300000, guid: 29dc247712eb1564fb3735ee815ec53c, type: 3}
       hp: 0
       coinReward: 0
     boss:
-      label: 
-      sprite: {fileID: 0}
+      label: "\uC2A4\uD14C\uC774\uC9C010 \uBCF4\uC2A4"
+      sprite: {fileID: 21300000, guid: e589447b165d75a43bb4cd35f971da16, type: 3}
       hp: 0
       coinReward: 0
-  - stageName: 
-    background: {fileID: 0}
+  - stageName: "STAGE.10 - \uCEE4\uD2BC\uC774 \uCCD0\uC9C4 \uD55C\uB0AE\uC758 \uCE68\uB300"
+    background: {fileID: 21300000, guid: da099f570d7967149a5bb140665f5fd4, type: 3}
     monsters:
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C011 \uBAAC\uC2A4\uD1301"
+      sprite: {fileID: 21300000, guid: 08307ba22ac785742a69b7f52e5db0a0, type: 3}
       hp: 0
       coinReward: 0
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C011 \uBAAC\uC2A4\uD1302"
+      sprite: {fileID: 21300000, guid: 8d6e94a32493c1b43bd36cdb04cecadd, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C011 \uBAAC\uC2A4\uD1303"
+      sprite: {fileID: 21300000, guid: bc2a7c6531415a7409c58ab0a1a26f2f, type: 3}
       hp: 0
       coinReward: 0
     boss:
-      label: 
-      sprite: {fileID: 0}
+      label: "\uC2A4\uD14C\uC774\uC9C011 \uBCF4\uC2A4"
+      sprite: {fileID: 21300000, guid: f2f35f5847f4d39469ce81cb50da8523, type: 3}
       hp: 0
       coinReward: 0
-  - stageName: 
-    background: {fileID: 0}
+  - stageName: "STAGE.11 - \uAFC8\uC73C\uB85C \uD5A5\uD558\uB294 \uAD00\uBB38 "
+    background: {fileID: 21300000, guid: ce5af7f5b6a0e224fa7fbbab961934b6, type: 3}
     monsters:
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C012 \uBAAC\uC2A4\uD1301"
+      sprite: {fileID: 21300000, guid: d081548e276009c4986676e7bde6ea26, type: 3}
       hp: 0
       coinReward: 0
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C012 \uBAAC\uC2A4\uD1302"
+      sprite: {fileID: 21300000, guid: f695e3590f361cb4b86011158c441c94, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C012 \uBAAC\uC2A4\uD1303"
+      sprite: {fileID: 21300000, guid: af76d65286fe45547ad655e825cf8f0b, type: 3}
       hp: 0
       coinReward: 0
     boss:
-      label: 
-      sprite: {fileID: 0}
+      label: "\uC2A4\uD14C\uC774\uC9C012 \uBCF4\uC2A4"
+      sprite: {fileID: 21300000, guid: 6078206ebf450d3428efd44566198833, type: 3}
       hp: 0
       coinReward: 0
-  - stageName: 
-    background: {fileID: 0}
+  - stageName: "STAGE.12 - \uBCC4\uC774 \uB728\uB294 \uB2E4\uB77D\uBC29"
+    background: {fileID: 21300000, guid: fee2b79fbbde0fc43a0a0639b7f36990, type: 3}
     monsters:
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C013 \uBAAC\uC2A4\uD1301"
+      sprite: {fileID: 21300000, guid: 6ffca97800cf4844091bad94fbf0da63, type: 3}
       hp: 0
       coinReward: 0
-    - label: 
-      sprite: {fileID: 0}
+    - label: "\uC2A4\uD14C\uC774\uC9C013 \uBAAC\uC2A4\uD1302"
+      sprite: {fileID: 21300000, guid: 852a0c0807845f645abc5b2c26de4d97, type: 3}
+      hp: 0
+      coinReward: 0
+    - label: "\uC2A4\uD14C\uC774\uC9C013 \uBAAC\uC2A4\uD1303"
+      sprite: {fileID: 21300000, guid: 862f5eb082d872544afe9f70b5000ec0, type: 3}
       hp: 0
       coinReward: 0
     boss:
-      label: 
-      sprite: {fileID: 0}
+      label: "\uC2A4\uD14C\uC774\uC9C013 \uBCF4\uC2A4"
+      sprite: {fileID: 21300000, guid: ffcb986826250bc41bb73ac4deb8cee9, type: 3}
       hp: 0
       coinReward: 0
   killsRequired: 5
@@ -1839,7 +1891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterManager
   characters:
   - characterName: "\uC584\uB8E8"
-    sprite: {fileID: 21300000, guid: 40b954859ee3f184fb62cbcfb03a5dbd, type: 3}
+    sprite: {fileID: 21300000, guid: 72155cc03d90165439b89fc42545e6d0, type: 3}
     unlockCost: 0
     baseDamage: 0
     damagePerLevel: 1
@@ -1847,9 +1899,9 @@ MonoBehaviour:
     levelUpBaseCost: 1
     levelUpCostPerLevel: 5
     unlocked: 1
-    level: 0
+    level: 1
   - characterName: "\uB69C\uB9AC"
-    sprite: {fileID: 21300000, guid: 8eb0e3d9dc0408e4ab3f19292d83f50a, type: 3}
+    sprite: {fileID: 21300000, guid: 70505b965da4f1742a5dfe69f7800ab5, type: 3}
     unlockCost: 500
     baseDamage: 5
     damagePerLevel: 5
@@ -1858,8 +1910,8 @@ MonoBehaviour:
     levelUpCostPerLevel: 50
     unlocked: 0
     level: 1
-  - characterName: 
-    sprite: {fileID: 0}
+  - characterName: "\uB098\uB978"
+    sprite: {fileID: 21300000, guid: 57ffb675a020ce240b20c42b9afc0733, type: 3}
     unlockCost: 0
     baseDamage: 0
     damagePerLevel: 0
@@ -1867,9 +1919,9 @@ MonoBehaviour:
     levelUpBaseCost: 0
     levelUpCostPerLevel: 0
     unlocked: 0
-    level: 0
-  - characterName: 
-    sprite: {fileID: 0}
+    level: 1
+  - characterName: "\uD3EC\uD3EC"
+    sprite: {fileID: 21300000, guid: 8826a86b3ba65c741b89d1af22891d09, type: 3}
     unlockCost: 0
     baseDamage: 0
     damagePerLevel: 0
@@ -1877,9 +1929,9 @@ MonoBehaviour:
     levelUpBaseCost: 0
     levelUpCostPerLevel: 0
     unlocked: 0
-    level: 0
-  - characterName: 
-    sprite: {fileID: 0}
+    level: 1
+  - characterName: "\uBBF8\uBC0D"
+    sprite: {fileID: 21300000, guid: 1d71b71b37c581f488fb4e412691fd3c, type: 3}
     unlockCost: 0
     baseDamage: 0
     damagePerLevel: 0
@@ -1887,9 +1939,9 @@ MonoBehaviour:
     levelUpBaseCost: 0
     levelUpCostPerLevel: 0
     unlocked: 0
-    level: 0
-  - characterName: 
-    sprite: {fileID: 0}
+    level: 1
+  - characterName: "\uBB34\uBB34"
+    sprite: {fileID: 21300000, guid: 55e65de116c634349b6608ea9b264015, type: 3}
     unlockCost: 0
     baseDamage: 0
     damagePerLevel: 0
@@ -1897,9 +1949,9 @@ MonoBehaviour:
     levelUpBaseCost: 0
     levelUpCostPerLevel: 0
     unlocked: 0
-    level: 0
-  - characterName: 
-    sprite: {fileID: 0}
+    level: 1
+  - characterName: "\uCFE0\uC6B8"
+    sprite: {fileID: 21300000, guid: 49ba950b59f52b24d99fdf84cdd6cb2e, type: 3}
     unlockCost: 0
     baseDamage: 0
     damagePerLevel: 0
@@ -1907,9 +1959,9 @@ MonoBehaviour:
     levelUpBaseCost: 0
     levelUpCostPerLevel: 0
     unlocked: 0
-    level: 0
-  - characterName: 
-    sprite: {fileID: 0}
+    level: 1
+  - characterName: "\uD1A0\uB3C4"
+    sprite: {fileID: 21300000, guid: 5cc4ad3127accb24aabd684a65740d70, type: 3}
     unlockCost: 0
     baseDamage: 0
     damagePerLevel: 0
@@ -1917,7 +1969,7 @@ MonoBehaviour:
     levelUpBaseCost: 0
     levelUpCostPerLevel: 0
     unlocked: 0
-    level: 0
+    level: 1
 --- !u!114 &357495399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1973,72 +2025,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StoryManager
   stories:
   - characterIndex: 0
-    title: 
+    title: "\uC584\uB8E8\uC758 \uD68C\uC0C1"
     content: 
-    storyImage: {fileID: 0}
+    storyImage: {fileID: 21300000, guid: abf53568c74639042b6fe21593bbfc9f, type: 3}
     requiredLevel: 0
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
     purchased: 0
   - characterIndex: 1
-    title: 
+    title: "\uB69C\uB9AC\uC758 \uD68C\uC0C1"
     content: 
-    storyImage: {fileID: 0}
+    storyImage: {fileID: 21300000, guid: dcad7733b29ace9428d8224ddcb76771, type: 3}
     requiredLevel: 0
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
     purchased: 0
   - characterIndex: 0
-    title: 
+    title: "\uB098\uB978\uC758 \uD68C\uC0C1"
     content: 
-    storyImage: {fileID: 0}
+    storyImage: {fileID: 21300000, guid: 47d47a3b8e7c6c34b978ff9eb568b671, type: 3}
     requiredLevel: 0
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
     purchased: 0
   - characterIndex: 0
-    title: 
+    title: "\uD3EC\uD3EC\uC758 \uD68C\uC0C1"
     content: 
-    storyImage: {fileID: 0}
+    storyImage: {fileID: 21300000, guid: ee47baea36773d74fb221c5dabda6c42, type: 3}
     requiredLevel: 0
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
     purchased: 0
   - characterIndex: 0
-    title: 
+    title: "\uBBF8\uBC0D\uC758 \uD68C\uC0C1"
     content: 
-    storyImage: {fileID: 0}
+    storyImage: {fileID: 21300000, guid: 3783a359c310de6468afab09bbb20cfe, type: 3}
     requiredLevel: 0
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
     purchased: 0
   - characterIndex: 0
-    title: 
+    title: "\uBB34\uBB34\uC758 \uD68C\uC0C1"
     content: 
-    storyImage: {fileID: 0}
+    storyImage: {fileID: 21300000, guid: 8270d536b00050e4eabf707b069ff914, type: 3}
     requiredLevel: 0
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
     purchased: 0
   - characterIndex: 0
-    title: 
+    title: "\uCFE0\uC6B8\uC758 \uD68C\uC0C1"
     content: 
-    storyImage: {fileID: 0}
+    storyImage: {fileID: 21300000, guid: 73a2eca4f2349114ab315c11c72bfc0c, type: 3}
     requiredLevel: 0
     cost: 0
     moonDamageBonus: 0
     moonIntervalReduction: 0
     purchased: 0
   - characterIndex: 0
-    title: 
+    title: "\uD1A0\uB3C4\uC758 \uD68C\uC0C1"
     content: 
-    storyImage: {fileID: 0}
+    storyImage: {fileID: 21300000, guid: 79bc70d4b36303449969e7500aa3c49e, type: 3}
     requiredLevel: 0
     cost: 0
     moonDamageBonus: 0
@@ -2075,7 +2127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ConstellationManager
   constellations:
   - constellationName: "\uC591\uC790\uB9AC"
-    previewSprite: {fileID: 21300000, guid: 88cea2d2602f8a2478018587b2b2134c, type: 3}
+    previewSprite: {fileID: 21300000, guid: 85ec36ab53ff9af4fa98b7a6a2cd5dc9, type: 3}
     starCount: 4
     unlockStage: 0
     starBaseCost: 5
@@ -2084,8 +2136,8 @@ MonoBehaviour:
     effectValue: 20
     visualObject: {fileID: 1489754165}
     purchasedStars: 0
-  - constellationName: 
-    previewSprite: {fileID: 0}
+  - constellationName: "\uD669\uC18C\uC790\uB9AC"
+    previewSprite: {fileID: 21300000, guid: 30b935691a44a14498f49c1ca18e1d3b, type: 3}
     starCount: 0
     unlockStage: 0
     starBaseCost: 0
@@ -2094,8 +2146,8 @@ MonoBehaviour:
     effectValue: 0
     visualObject: {fileID: 0}
     purchasedStars: 0
-  - constellationName: 
-    previewSprite: {fileID: 0}
+  - constellationName: "\uC30D\uB465\uC774\uC790\uB9AC"
+    previewSprite: {fileID: 21300000, guid: 3bda707b4f5de944aa7742a354fb82d8, type: 3}
     starCount: 0
     unlockStage: 0
     starBaseCost: 0
@@ -2104,8 +2156,8 @@ MonoBehaviour:
     effectValue: 0
     visualObject: {fileID: 0}
     purchasedStars: 0
-  - constellationName: 
-    previewSprite: {fileID: 0}
+  - constellationName: "\uAC8C\uC790\uB9AC"
+    previewSprite: {fileID: 21300000, guid: dd86ed4b3c56d944bb263e62b21a6b5c, type: 3}
     starCount: 0
     unlockStage: 0
     starBaseCost: 0
@@ -2114,8 +2166,8 @@ MonoBehaviour:
     effectValue: 0
     visualObject: {fileID: 0}
     purchasedStars: 0
-  - constellationName: 
-    previewSprite: {fileID: 0}
+  - constellationName: "\uC0AC\uC790\uC790\uB9AC"
+    previewSprite: {fileID: 21300000, guid: 96246d60116881940baa16551c57ad1d, type: 3}
     starCount: 0
     unlockStage: 0
     starBaseCost: 0
@@ -2124,8 +2176,8 @@ MonoBehaviour:
     effectValue: 0
     visualObject: {fileID: 0}
     purchasedStars: 0
-  - constellationName: 
-    previewSprite: {fileID: 0}
+  - constellationName: "\uCC98\uB140\uC790\uB9AC"
+    previewSprite: {fileID: 21300000, guid: 1cc58899924156044ba7868be46428a8, type: 3}
     starCount: 0
     unlockStage: 0
     starBaseCost: 0
@@ -2134,8 +2186,8 @@ MonoBehaviour:
     effectValue: 0
     visualObject: {fileID: 0}
     purchasedStars: 0
-  - constellationName: 
-    previewSprite: {fileID: 0}
+  - constellationName: "\uCC9C\uCE6D\uC790\uB9AC"
+    previewSprite: {fileID: 21300000, guid: 601031d464a8183449acf077e7334b3f, type: 3}
     starCount: 0
     unlockStage: 0
     starBaseCost: 0
@@ -2144,8 +2196,8 @@ MonoBehaviour:
     effectValue: 0
     visualObject: {fileID: 0}
     purchasedStars: 0
-  - constellationName: 
-    previewSprite: {fileID: 0}
+  - constellationName: "\uC804\uAC08\uC790\uB9AC"
+    previewSprite: {fileID: 21300000, guid: 9374347c6f9aa9448b5751622ce3a5f0, type: 3}
     starCount: 0
     unlockStage: 0
     starBaseCost: 0
@@ -2154,8 +2206,8 @@ MonoBehaviour:
     effectValue: 0
     visualObject: {fileID: 0}
     purchasedStars: 0
-  - constellationName: 
-    previewSprite: {fileID: 0}
+  - constellationName: "\uAD81\uC218\uC790\uB9AC"
+    previewSprite: {fileID: 21300000, guid: 50c706ea141e8e34ebe59bc6aace2296, type: 3}
     starCount: 0
     unlockStage: 0
     starBaseCost: 0
@@ -2164,8 +2216,8 @@ MonoBehaviour:
     effectValue: 0
     visualObject: {fileID: 0}
     purchasedStars: 0
-  - constellationName: 
-    previewSprite: {fileID: 0}
+  - constellationName: "\uC5FC\uC18C\uC790\uB9AC"
+    previewSprite: {fileID: 21300000, guid: 0f62d2a4e23c35749ad0696a59444d7b, type: 3}
     starCount: 0
     unlockStage: 0
     starBaseCost: 0
@@ -2174,8 +2226,8 @@ MonoBehaviour:
     effectValue: 0
     visualObject: {fileID: 0}
     purchasedStars: 0
-  - constellationName: 
-    previewSprite: {fileID: 0}
+  - constellationName: "\uBB3C\uBCD1\uC790\uB9AC"
+    previewSprite: {fileID: 21300000, guid: 1e83d2c5a4d2c4545a1c8ac05b36536c, type: 3}
     starCount: 0
     unlockStage: 0
     starBaseCost: 0
@@ -2184,8 +2236,8 @@ MonoBehaviour:
     effectValue: 0
     visualObject: {fileID: 0}
     purchasedStars: 0
-  - constellationName: 
-    previewSprite: {fileID: 0}
+  - constellationName: "\uBB3C\uACE0\uAE30\uC790\uB9AC"
+    previewSprite: {fileID: 21300000, guid: 121e8769ee551b34d8353eb6afbba29f, type: 3}
     starCount: 0
     unlockStage: 0
     starBaseCost: 0
@@ -4374,7 +4426,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 8a21079a87dab774587c62d52bc78cce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4888,7 +4940,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -16.2736, y: 28.7517}
+  m_AnchoredPosition: {x: -16.27362, y: 28.751709}
   m_SizeDelta: {x: -101.4705, y: -95.6594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &948926888
@@ -7311,7 +7363,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9b213f37f0539de45b7a080ca144508a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
