@@ -32,6 +32,9 @@ public class BossManager : MonoBehaviour
     [Header("제한 시간 (초)")]
     public float bossDuration = 20f;
 
+    [Header("타이머 묶음 (Time_Text의 상위 = Timer. 배경 등 장식까지 함께 숨기려면 여기에 넣는다)")]
+    public GameObject timerRoot;
+
     [Header("남은 시간 표시 Text (선택, 레거시/TMP 중 하나)")]
     public Text timerText;
     public TMP_Text timerTmpText;
@@ -138,9 +141,20 @@ public class BossManager : MonoBehaviour
         currentBoss = null; // 보스는 EnemyHealth.Die()에서 스스로 파괴됨
         EndBossPhase();
 
-        if (StageManager.Instance != null) StageManager.Instance.AdvanceStage();
-        if (monsterSpawner != null) monsterSpawner.ResumeSpawning();
+        StageManager sm = StageManager.Instance;
+        // 마지막 스테이지였는지는 AdvanceStage()가 스테이지를 올리기 '전'에 봐야 한다
+        bool wasFinalStage = sm != null && sm.IsFinalStage;
 
+        if (sm != null) sm.AdvanceStage();   // 최종 스테이지면 진행 대신 엔딩을 알린다
+
+        if (wasFinalStage)
+        {
+            // 엔딩 — 일반 몬스터를 재개하지 않는다 (보스전 시작 때 이미 비워진 상태 유지)
+            Debug.Log("최종 보스 처치! 엔딩.");
+            return;
+        }
+
+        if (monsterSpawner != null) monsterSpawner.ResumeSpawning();
         Debug.Log("보스 처치 성공! 다음 스테이지로 이동.");
     }
 
@@ -171,8 +185,17 @@ public class BossManager : MonoBehaviour
         ShowTimer(false);
     }
 
+    // 타이머는 보스전 동안에만 보인다. 일반 몬스터를 잡는 중에는 숨긴다.
     void ShowTimer(bool show)
     {
+        // 묶음(Timer)이 배선돼 있으면 그것만 끄면 된다 — 자식인 Text도 함께 꺼지고,
+        // 배경 같은 장식까지 한 번에 숨겨진다.
+        if (timerRoot != null)
+        {
+            timerRoot.SetActive(show);
+            return;
+        }
+
         if (timerText != null) timerText.gameObject.SetActive(show);
         if (timerTmpText != null) timerTmpText.gameObject.SetActive(show);
     }

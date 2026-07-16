@@ -15,6 +15,9 @@ public class StoryManager : MonoBehaviour
     // 구매로 상태가 바뀌었을 때 (UI 갱신용)
     public event Action OnStoriesChanged;
 
+    // 이야기를 방금 구매했을 때 (이야기 번호) — 구매 즉시 스토리를 띄우는 데 쓴다
+    public event Action<int> OnStoryPurchased;
+
     public int Count => stories != null ? stories.Length : 0;
 
     void Awake()
@@ -101,6 +104,7 @@ public class StoryManager : MonoBehaviour
 
         s.purchased = true;
         OnStoriesChanged?.Invoke();
+        OnStoryPurchased?.Invoke(index);   // 구매 즉시 스토리 표시
         Debug.Log("이야기 구매: " + s.title
                   + " → 달 데미지 +" + s.moonDamageBonus
                   + ", 주기 -" + s.moonIntervalReduction + "초");

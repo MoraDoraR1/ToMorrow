@@ -28,6 +28,12 @@ public class StageManager : MonoBehaviour
     public string CurrentStageName => GetStageName(currentStage);
     public StageInfo CurrentStageInfo => GetStageInfo(currentStage);
 
+    /// <summary>마지막 스테이지 번호. 인스펙터 stages 배열 기준(13칸 → STAGE.12).</summary>
+    public int LastStage => stages != null && stages.Length > 0 ? stages.Length - 1 : 0;
+
+    /// <summary>지금이 마지막 스테이지인가 — 여기서 보스를 처치하면 엔딩.</summary>
+    public bool IsFinalStage => currentStage >= LastStage;
+
     /// <summary>데이터 테이블에서 보스 도전 필요 처치 수를 주입한다.</summary>
     public void SetKillsRequired(int value)
     {
@@ -73,9 +79,23 @@ public class StageManager : MonoBehaviour
     // 스테이지가 바뀌었을 때 (테마 변경 등에 사용)
     public event Action<int> OnStageChanged;
 
-    /// <summary>다음 스테이지로 진행하고 처치 수를 0으로 리셋한다. (보스 처치 성공 시)</summary>
+    // 마지막 스테이지의 보스까지 처치했을 때 (엔딩)
+    public event Action OnAllStagesCleared;
+
+    /// <summary>
+    /// 다음 스테이지로 진행하고 처치 수를 0으로 리셋한다. (보스 처치 성공 시)
+    /// 마지막 스테이지에서는 진행하지 않고 엔딩을 알린다 — 더 넘어가면 GetStageInfo가
+    /// null이 되어 배경·몬스터·보스가 전부 깨진다.
+    /// </summary>
     public void AdvanceStage()
     {
+        if (IsFinalStage)
+        {
+            Debug.Log("모든 스테이지 클리어! (STAGE." + currentStage.ToString("00") + ") → 엔딩");
+            OnAllStagesCleared?.Invoke();
+            return;
+        }
+
         currentStage++;
         killCount = 0;
         OnKillCountChanged?.Invoke(killCount, killsRequired);

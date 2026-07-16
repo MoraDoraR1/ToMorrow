@@ -16,6 +16,9 @@ public class StoryData
     [TextArea(3, 8)]
     public string content;
 
+    [Header("스토리 이미지 (구매 즉시 크게 표시되고, 다시보기로 언제든 재열람)")]
+    public Sprite storyImage;
+
     [Header("열리는 데 필요한 캐릭터 레벨")]
     public int requiredLevel = 150;
 
