@@ -4,3 +4,5 @@ moonDamage,5,달 자동공격 1회 데미지
 moonInterval,1,달 자동공격 주기(초)
 bossDuration,20,보스전 제한시간(초)
 killsRequired,50,보스 도전에 필요한 일반 몬스터 처치 수
+offlineRate,0.05,오프라인 초당 지급 배율 (현재 스테이지 몬스터 평균 보상 x 이 값 x 초)
+offlineMaxHours,2,오프라인 보상 최대 인정 시간(시간). 더 꺼둬도 이 이상은 안 쌓임

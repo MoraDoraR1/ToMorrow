@@ -17,6 +17,7 @@ public class DataTableLoader : MonoBehaviour
     public ConstellationManager constellationManager;
     public FullMoonAttack fullMoonAttack;
     public BossManager bossManager;
+    public OfflineReward offlineReward;
 
     [Header("CSV 경로 (Resources 아래, 확장자 제외)")]
     public string stageCsv = "Data/Stage";
@@ -185,6 +186,12 @@ public class DataTableLoader : MonoBehaviour
                     break;
                 case "killsRequired":
                     if (stageManager != null) stageManager.SetKillsRequired(t.GetInt(r, "value", stageManager.KillsRequired));
+                    break;
+                case "offlineRate":
+                    if (offlineReward != null) offlineReward.rate = t.GetFloat(r, "value", offlineReward.rate);
+                    break;
+                case "offlineMaxHours":
+                    if (offlineReward != null) offlineReward.maxHours = t.GetFloat(r, "value", offlineReward.maxHours);
                     break;
                 default:
                     Debug.LogWarning("DataTableLoader: Balance.csv 에 모르는 key → " + key);

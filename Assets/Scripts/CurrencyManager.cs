@@ -28,6 +28,15 @@ public class CurrencyManager : MonoBehaviour
         Instance = this;
     }
 
+    /// <summary>
+    /// 저장된 보유량을 되돌린다. (SaveManager 전용)
+    /// Awake 단계에서 불리므로 이벤트는 쏘지 않는다 — UI는 Start에서 현재 값을 직접 읽는다.
+    /// </summary>
+    public void RestoreDreamCoin(int amount)
+    {
+        dreamCoin = Mathf.Max(0, amount);
+    }
+
     public void AddDreamCoin(int amount)
     {
         if (amount <= 0) return;

@@ -69,10 +69,14 @@ public class EndingPanelUI : MonoBehaviour
     /// 스테이지·꿈코인·캐릭터 해금/레벨·이야기·별자리가 모두 씬의 초기값으로 되돌아가고,
     /// DataTableLoader가 Awake에서 CSV 수치를 다시 주입한다.
     /// (매니저별로 일일이 되돌리는 것보다 빠뜨릴 여지가 없다)
+    ///
+    /// 저장본을 반드시 먼저 지운다 — 안 지우면 씬을 다시 불러도 SaveManager가 Awake에서
+    /// 예전 진행도를 그대로 복원해 '다시시작'이 아무 일도 하지 않게 된다.
     /// </summary>
     public void Restart()
     {
         Time.timeScale = 1f;
+        if (SaveManager.Instance != null) SaveManager.Instance.Delete();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

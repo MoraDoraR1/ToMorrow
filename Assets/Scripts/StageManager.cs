@@ -40,6 +40,17 @@ public class StageManager : MonoBehaviour
         killsRequired = Mathf.Max(1, value);
     }
 
+    /// <summary>
+    /// 저장된 진행도를 되돌린다. (SaveManager 전용)
+    /// Awake 단계에서 불리므로 이벤트는 쏘지 않는다 — 구독자(UI)는 아직 Start 전이고,
+    /// 어차피 Start에서 현재 값을 직접 읽어 초기화한다.
+    /// </summary>
+    public void RestoreProgress(int stage, int kills)
+    {
+        currentStage = Mathf.Clamp(stage, 0, LastStage);
+        killCount = Mathf.Clamp(kills, 0, killsRequired);
+    }
+
     /// <summary>스테이지 번호에 해당하는 테마 데이터를 돌려준다. 범위를 벗어나면 null.</summary>
     public StageInfo GetStageInfo(int stage)
     {
