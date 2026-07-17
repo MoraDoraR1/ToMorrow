@@ -100,6 +100,13 @@ public class BossManager : MonoBehaviour
         if (bossActive || bossPrefab == null || spawnParent == null) return;
         bossActive = true;
 
+        // 보스 등장 효과음(1회) + 보스전 전용 BGM으로 전환
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayBossAppear();
+            AudioManager.Instance.PlayBossBgm();
+        }
+
         if (bossButton != null) bossButton.SetActive(false);
 
         // 일반 몬스터 정지 + 제거
@@ -149,7 +156,8 @@ public class BossManager : MonoBehaviour
 
         if (wasFinalStage)
         {
-            // 엔딩 — 일반 몬스터를 재개하지 않는다 (보스전 시작 때 이미 비워진 상태 유지)
+            // 엔딩 — 일반 몬스터를 재개하지 않고(보스전 시작 때 비워진 상태 유지), BGM도 멈춘다.
+            if (AudioManager.Instance != null) AudioManager.Instance.StopBgm();
             Debug.Log("최종 보스 처치! 엔딩.");
             return;
         }
@@ -171,6 +179,9 @@ public class BossManager : MonoBehaviour
         }
 
         EndBossPhase();
+
+        // 보스전 실패 → 원래 스테이지 BGM으로 복귀 (성공 시엔 스테이지가 올라가며 자동 교체됨)
+        if (AudioManager.Instance != null) AudioManager.Instance.ResumeStageBgm();
 
         // 일반 페이즈 복귀 (카운트 50 유지 → 재도전 버튼 노출)
         if (monsterSpawner != null) monsterSpawner.ResumeSpawning();

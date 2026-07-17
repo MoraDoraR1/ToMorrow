@@ -44,6 +44,9 @@ public class PlayerAttack : MonoBehaviour
             return;
         }
 
+        // 클릭 공격음 (실제 데미지는 명중 시점에 들어가지만, 발사=플레이어 행동이므로 여기서 낸다)
+        if (AudioManager.Instance != null) AudioManager.Instance.PlayAttack();
+
         // Canvas(또는 지정된 부모) 아래에 생성해야 UI 계층에 정상적으로 표시됨
         GameObject projectileObj = Instantiate(projectilePrefab, canvasTransform);
 

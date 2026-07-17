@@ -49,6 +49,9 @@ public class EnemyHealth : MonoBehaviour
 
         Debug.Log("적 체력 : " + hp);
 
+        // 피격음 — 클릭/달 어느 쪽으로 맞든 데미지가 들어오는 이 지점에서 낸다.
+        if (AudioManager.Instance != null) AudioManager.Instance.PlayHit();
+
         // 체력 변경 통지 (0 밑으로는 표시상 0으로 고정)
         OnHealthChanged?.Invoke(Mathf.Max(hp, 0), MaxHp);
 
@@ -69,6 +72,9 @@ public class EnemyHealth : MonoBehaviour
             int reward = Mathf.RoundToInt(coinReward * (1f + bonus));
             CurrencyManager.Instance.AddDreamCoin(reward);
         }
+
+        // 꿈코인 드랍음 (일반·보스 공통)
+        if (AudioManager.Instance != null) AudioManager.Instance.PlayCoin();
 
         // 스테이지 처치 수 등록 (보스는 countsTowardStage=false로 제외)
         if (countsTowardStage && StageManager.Instance != null)
